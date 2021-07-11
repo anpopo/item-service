@@ -24,6 +24,9 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// java validation - 인터페이스: jakarta validator ,구현체: hibernate validator
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
 
 test {
