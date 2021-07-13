@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form th:object="${form}" th:method="post">
+  number field <input type="text" th:field="*{number}"><br/>
+  localDateTime field <input type="text" th:field="*{localDateTime}"><br/>
+  <hr />
+  number val <input type="text" th:value="*{number}"><br/>
+  localDateTime val <input type="text" th:value="*{localDateTime}"><br/>
+  <input type="submit"/>
+</form>
+</body>
+</html>
