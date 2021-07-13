@@ -28,13 +28,13 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addInterceptor(new LogInterceptor())
                 .order(1)
                 .addPathPatterns("/**")
-                .excludePathPatterns("/css/**", "/*.icon", "/error");
+                .excludePathPatterns("/css/**", "/*.ico", "/error", "/error-page/**");
 
 
         registry.addInterceptor(new LoginCheckInterceptor())
                 .order(2)
                 .addPathPatterns("/**")
-                .excludePathPatterns("/", "/members/add", "/login", "/logout", "/css/**", "/*.icon", "/error");
+                .excludePathPatterns("/", "/members/add", "/login", "/logout", "/css/**", "/*.icon", "/error", "/error-**", "/error-**/**");
     }
 
 
